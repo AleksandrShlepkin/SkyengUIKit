@@ -20,6 +20,7 @@
 		04A1E3952A4DCDAE0023DA61 /* MainCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1E3942A4DCDAE0023DA61 /* MainCollectionView.swift */; };
 		04A1E3972A4DCDC00023DA61 /* MainCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1E3962A4DCDC00023DA61 /* MainCollectionViewFlowLayout.swift */; };
 		04A1E3992A4DCDD20023DA61 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1E3982A4DCDD20023DA61 /* MainCollectionViewCell.swift */; };
+		AE834000290D038C38C89A04 /* Pods_SkyengUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6999FA51D57FE1B4E519A1A0 /* Pods_SkyengUIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,9 @@
 		04A1E3942A4DCDAE0023DA61 /* MainCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionView.swift; sourceTree = "<group>"; };
 		04A1E3962A4DCDC00023DA61 /* MainCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		04A1E3982A4DCDD20023DA61 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
+		6999FA51D57FE1B4E519A1A0 /* Pods_SkyengUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkyengUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C071925474262242F82C5F1A /* Pods-SkyengUIKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyengUIKit.release.xcconfig"; path = "Target Support Files/Pods-SkyengUIKit/Pods-SkyengUIKit.release.xcconfig"; sourceTree = "<group>"; };
+		D33F5B8F66EACA708173F700 /* Pods-SkyengUIKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyengUIKit.debug.xcconfig"; path = "Target Support Files/Pods-SkyengUIKit/Pods-SkyengUIKit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE834000290D038C38C89A04 /* Pods_SkyengUIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +61,8 @@
 			children = (
 				048CD9E22A4DB9C1001D9E29 /* SkyengUIKit */,
 				048CD9E12A4DB9C1001D9E29 /* Products */,
+				DE52BA748114F63D5C141B5B /* Pods */,
+				CCFCE278172DC08B0F24DAFB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,6 +143,24 @@
 			path = MainCollectionView;
 			sourceTree = "<group>";
 		};
+		CCFCE278172DC08B0F24DAFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6999FA51D57FE1B4E519A1A0 /* Pods_SkyengUIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE52BA748114F63D5C141B5B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D33F5B8F66EACA708173F700 /* Pods-SkyengUIKit.debug.xcconfig */,
+				C071925474262242F82C5F1A /* Pods-SkyengUIKit.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,9 +168,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 048CD9F42A4DB9C8001D9E29 /* Build configuration list for PBXNativeTarget "SkyengUIKit" */;
 			buildPhases = (
+				A913EA2C55CF51E4947AC2E2 /* [CP] Check Pods Manifest.lock */,
 				048CD9DC2A4DB9C1001D9E29 /* Sources */,
 				048CD9DD2A4DB9C1001D9E29 /* Frameworks */,
 				048CD9DE2A4DB9C1001D9E29 /* Resources */,
+				DD849802288C6FF5A3247E4B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -200,6 +227,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A913EA2C55CF51E4947AC2E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SkyengUIKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD849802288C6FF5A3247E4B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SkyengUIKit/Pods-SkyengUIKit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SkyengUIKit/Pods-SkyengUIKit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SkyengUIKit/Pods-SkyengUIKit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		048CD9DC2A4DB9C1001D9E29 /* Sources */ = {
@@ -350,6 +419,7 @@
 		};
 		048CD9F52A4DB9C8001D9E29 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D33F5B8F66EACA708173F700 /* Pods-SkyengUIKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -381,6 +451,7 @@
 		};
 		048CD9F62A4DB9C8001D9E29 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C071925474262242F82C5F1A /* Pods-SkyengUIKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -1,0 +1,6 @@
+framework module Pods_SkyengUIKit {
+  umbrella header "Pods-SkyengUIKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
