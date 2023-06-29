@@ -13,6 +13,8 @@
 		048CD9ED2A4DB9C8001D9E29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048CD9EC2A4DB9C8001D9E29 /* Assets.xcassets */; };
 		048CD9F02A4DB9C8001D9E29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048CD9EE2A4DB9C8001D9E29 /* LaunchScreen.storyboard */; };
 		04A1E3862A4DCB900023DA61 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1E3852A4DCB900023DA61 /* ModuleBuilder.swift */; };
+		04A1E3892A4DCBF10023DA61 /* WordsModelElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1E3882A4DCBF10023DA61 /* WordsModelElement.swift */; };
+		04A1E38B2A4DCC000023DA61 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1E38A2A4DCC000023DA61 /* APIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		048CD9EF2A4DB9C8001D9E29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		048CD9F12A4DB9C8001D9E29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04A1E3852A4DCB900023DA61 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
+		04A1E3882A4DCBF10023DA61 /* WordsModelElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsModelElement.swift; sourceTree = "<group>"; };
+		04A1E38A2A4DCC000023DA61 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		048CD9E22A4DB9C1001D9E29 /* SkyengUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				04A1E3872A4DCBDB0023DA61 /* Service */,
 				04A1E3842A4DCB7E0023DA61 /* ModuleBuilder */,
 				048CD9E32A4DB9C1001D9E29 /* AppDelegate.swift */,
 				048CD9E52A4DB9C1001D9E29 /* SceneDelegate.swift */,
@@ -73,6 +78,15 @@
 				04A1E3852A4DCB900023DA61 /* ModuleBuilder.swift */,
 			);
 			path = ModuleBuilder;
+			sourceTree = "<group>";
+		};
+		04A1E3872A4DCBDB0023DA61 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				04A1E3882A4DCBF10023DA61 /* WordsModelElement.swift */,
+				04A1E38A2A4DCC000023DA61 /* APIService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,7 +161,9 @@
 			files = (
 				048CD9E82A4DB9C1001D9E29 /* MainViewController.swift in Sources */,
 				048CD9E42A4DB9C1001D9E29 /* AppDelegate.swift in Sources */,
+				04A1E3892A4DCBF10023DA61 /* WordsModelElement.swift in Sources */,
 				048CD9E62A4DB9C1001D9E29 /* SceneDelegate.swift in Sources */,
+				04A1E38B2A4DCC000023DA61 /* APIService.swift in Sources */,
 				04A1E3862A4DCB900023DA61 /* ModuleBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
