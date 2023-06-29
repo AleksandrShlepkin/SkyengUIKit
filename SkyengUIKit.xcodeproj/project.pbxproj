@@ -16,6 +16,7 @@
 		04A1E3892A4DCBF10023DA61 /* WordsModelElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1E3882A4DCBF10023DA61 /* WordsModelElement.swift */; };
 		04A1E38B2A4DCC000023DA61 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1E38A2A4DCC000023DA61 /* APIService.swift */; };
 		04A1E38F2A4DCC5F0023DA61 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1E38E2A4DCC5F0023DA61 /* Presenter.swift */; };
+		04A1E3922A4DCCB50023DA61 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1E3912A4DCCB50023DA61 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		04A1E3882A4DCBF10023DA61 /* WordsModelElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsModelElement.swift; sourceTree = "<group>"; };
 		04A1E38A2A4DCC000023DA61 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		04A1E38E2A4DCC5F0023DA61 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		04A1E3912A4DCCB50023DA61 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +69,6 @@
 				04A1E3842A4DCB7E0023DA61 /* ModuleBuilder */,
 				048CD9E32A4DB9C1001D9E29 /* AppDelegate.swift */,
 				048CD9E52A4DB9C1001D9E29 /* SceneDelegate.swift */,
-				048CD9E72A4DB9C1001D9E29 /* MainViewController.swift */,
 				048CD9EC2A4DB9C8001D9E29 /* Assets.xcassets */,
 				048CD9EE2A4DB9C8001D9E29 /* LaunchScreen.storyboard */,
 				048CD9F12A4DB9C8001D9E29 /* Info.plist */,
@@ -95,6 +96,7 @@
 		04A1E38C2A4DCC4B0023DA61 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
+				04A1E3902A4DCC8C0023DA61 /* MainView */,
 				04A1E38D2A4DCC550023DA61 /* Presenter */,
 			);
 			path = MainScreen;
@@ -106,6 +108,15 @@
 				04A1E38E2A4DCC5F0023DA61 /* Presenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		04A1E3902A4DCC8C0023DA61 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				048CD9E72A4DB9C1001D9E29 /* MainViewController.swift */,
+				04A1E3912A4DCCB50023DA61 /* MainView.swift */,
+			);
+			path = MainView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				048CD9E82A4DB9C1001D9E29 /* MainViewController.swift in Sources */,
+				04A1E3922A4DCCB50023DA61 /* MainView.swift in Sources */,
 				04A1E38F2A4DCC5F0023DA61 /* Presenter.swift in Sources */,
 				048CD9E42A4DB9C1001D9E29 /* AppDelegate.swift in Sources */,
 				04A1E3892A4DCBF10023DA61 /* WordsModelElement.swift in Sources */,
