@@ -43,6 +43,7 @@ class MainCollectionViewCell: UICollectionViewCell {
         let image = UIImageView()
         image.layer.masksToBounds = true
         image.translatesAutoresizingMaskIntoConstraints = false
+        image.layer.cornerRadius = 12
         return image
     }()
     
@@ -63,7 +64,7 @@ class MainCollectionViewCell: UICollectionViewCell {
     @objc private func playSoundFunc(_ sender: UIButton) {
         NotificationCenter.default.post(name: Notification.Name("testSound"), object: nil)
     }
-    
+
     private func setupView() {
         backgroundColor = .systemGray5
         layer.cornerRadius = 10
@@ -77,26 +78,20 @@ class MainCollectionViewCell: UICollectionViewCell {
             translationLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
             translationLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
             translationLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40),
-            translationLabel.heightAnchor.constraint(equalToConstant: 20),
-            translationLabel.widthAnchor.constraint(equalToConstant: 40),
             
             transcriptionLabel.topAnchor.constraint(equalTo: translationLabel.bottomAnchor, constant: 10),
             transcriptionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
             transcriptionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40),
-            transcriptionLabel.heightAnchor.constraint(equalToConstant: 20),
             
             playButton.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            playButton.leadingAnchor.constraint(equalTo: translationLabel.trailingAnchor, constant: 10),
             playButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             playButton.heightAnchor.constraint(equalToConstant: 25),
             playButton.widthAnchor.constraint(equalToConstant: 25),
             
             mainImage.topAnchor.constraint(equalTo: transcriptionLabel.bottomAnchor, constant: 10),
-            mainImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            mainImage.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            mainImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 50),
+            mainImage.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -50),
             mainImage.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
-            mainImage.heightAnchor.constraint(equalToConstant: 30),
-            mainImage.widthAnchor.constraint(equalToConstant: 30)
         ])
     }
 }

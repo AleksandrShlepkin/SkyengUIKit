@@ -15,7 +15,7 @@ class MainViewController: UIViewController {
     
     let mainView = MainView()
     var presenter: MainViewPresenterProtocol?
-
+    
     //MARK: - Private functions
     
     @objc private func getAudio() {
@@ -23,7 +23,7 @@ class MainViewController: UIViewController {
         let arrayUrl = presenter?.trans?.compactMap { $0.soundURL }
         let url = "https://vimbox-tts.skyeng.ru/api/v1/tts?text=%3Cspeak%3E%3Cphoneme+alphabet%3D%22ipa%22+ph%3D%22h%C9%9B%CB%88l%C9%99%CA%8A%22%3E%3C%2Fphoneme%3E%3C%2Fspeak%3E&lang=en&voice=female_1&isSsml=1"
         let playerItem = AVPlayerItem(url: URL(string: url)!)
-    
+        
         player = AVPlayer(playerItem: playerItem)
         player.automaticallyWaitsToMinimizeStalling = false
         try? AVAudioSession.sharedInstance().setCategory(.ambient, mode: .default)
@@ -31,7 +31,7 @@ class MainViewController: UIViewController {
         
         player.volume = 1.0
         player.play()
-    print("Play")
+        print("Play")
     }
     
     override func loadView() {
@@ -77,6 +77,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         cell.mainImage.sd_setImage(with: URL(string: "https:" + imageUrl))
         return cell
     }
+    
 }
 
 extension MainViewController: MainViewDelegate {
@@ -90,6 +91,6 @@ extension MainViewController: MainViewDelegate {
 }
 
 extension MainViewController: UITextFieldDelegate {
-
+    
 }
 
