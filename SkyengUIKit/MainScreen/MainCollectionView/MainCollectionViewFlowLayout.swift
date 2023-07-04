@@ -94,12 +94,12 @@ extension MainCollectionViewFlowLayout {
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         var resultAttributes = [UICollectionViewLayoutAttributes]()
         
-        for attributes in cacheAttributes {
-            if attributes.frame.intersects(rect) {
-                resultAttributes.append(attributes)
+        return cacheAttributes.compactMap({
+            if $0.frame.intersects(rect) {
+                return $0
             }
-        }
-        return resultAttributes
+            return nil
+        })
     }
     
     override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint) -> CGPoint {

@@ -41,7 +41,6 @@ class MainCollectionViewCell: UICollectionViewCell {
     
     private(set) var mainImage: UIImageView = {
         let image = UIImageView()
-        image.backgroundColor = .brown
         image.layer.masksToBounds = true
         image.translatesAutoresizingMaskIntoConstraints = false
         return image

@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import SDWebImage
 
 class MainViewController: UIViewController {
     
@@ -70,15 +71,15 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionView", for: indexPath) as? MainCollectionViewCell else { return UICollectionViewCell() }
-        let imageUrl = (presenter?.trans?[indexPath.item].imageURL)!
+        let imageUrl = (presenter?.trans?[indexPath.row].imageURL)!
         cell.translationLabel.text = presenter?.trans?[indexPath.row].translation.text
         cell.transcriptionLabel.text = presenter?.trans?[indexPath.row].transcription
-
+        cell.mainImage.sd_setImage(with: URL(string: "https:" + imageUrl))
         return cell
     }
 }
 
-extension MainViewController: MainViewProtocol {
+extension MainViewController: MainViewDelegate {
     func succes() {
         mainView.collectionView.reloadData()
     }
